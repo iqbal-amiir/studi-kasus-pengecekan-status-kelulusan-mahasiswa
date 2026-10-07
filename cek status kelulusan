@@ -1,0 +1,33 @@
+class Mahasiswa {
+  String nama;
+  String nim;
+  int nilaiUjian;
+
+  Mahasiswa(String nama, String nim, int nilaiUjian) {
+    this.nama = nama;
+    this.nim = nim;
+    this.nilaiUjian = nilaiUjian;
+  }
+
+  void cekStatus() {
+    System.out.println("Nama : " + nama);
+    System.out.println("NIM: " + nim);
+    System.out.println("Nilai: " + nilaiUjian);
+
+    if (nilaiUjian >= 70)
+      System.out.println("Status: LULUS");
+    else 
+      System.out.println("Status: MENGULANG");
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Mahasiswa mhs1 = new Mahasiswa("Taylor Swift", "000001", 89);
+
+    Mahasiswa mhs2 = new Mahasiswa("Billie Eilish", "000002", 60);
+
+    mhs1.cekStatus();
+    mhs2.cekStatus();
+  }
+}
